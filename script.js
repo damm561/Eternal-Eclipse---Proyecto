@@ -208,38 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('🎂 Aplicación iniciada correctamente');
 });
 
-function initializeDarkMode() {
-    const savedDarkMode = localStorage.getItem('darkMode');
-    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedDarkMode === 'true') {
-        appState.darkMode = true;
-        document.documentElement.classList.add('dark');
-    } else if (savedDarkMode === 'false') {
-        appState.darkMode = false;
-        document.documentElement.classList.remove('dark');
-    } else {
-        appState.darkMode = prefersDarkMode;
-        if (prefersDarkMode) {
-            document.documentElement.classList.add('dark');
-        }
-    }
-    
-    updateDarkModeIcons();
-}
 
-function updateDarkModeIcons() {
-    const sunIcons = document.querySelectorAll('.sun-icon');
-    const moonIcons = document.querySelectorAll('.moon-icon');
-    
-    if (appState.darkMode) {
-        sunIcons.forEach(icon => icon.classList.add('hidden'));
-        moonIcons.forEach(icon => icon.classList.remove('hidden'));
-    } else {
-        sunIcons.forEach(icon => icon.classList.remove('hidden'));
-        moonIcons.forEach(icon => icon.classList.add('hidden'));
-    }
-}
 
 function initializeApp() {
     updateNavigation();
