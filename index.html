@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doña Isabela - Pastelería Artesanal</title>
+    <meta name="description" content="Doña Isabela - Pastelería artesanal. Creamos pasteles únicos con amor, tradición y los mejores ingredientes. Personaliza tu pastel ideal.">
+
+     <!-- Tailwind CSS -->
+     <script src="https://cdn.tailwindcss.com"></script>
+     <script>
+         tailwind.config = {
+             theme: {
+                 extend: {
+                     colors: {
+                         'pink-50': '#fdf2f8',
+                         'pink-100': '#fce7f3',
+                         'pink-200': '#fbcfe8',
+                         'pink-300': '#f9a8d4',
+                         'pink-500': '#ec4899',
+                         'pink-600': '#db2777',
+                         'purple-50': '#faf5ff',
+                         'purple-300': '#d8b4fe',
+                         'purple-500': '#a855f7',
+                         'purple-600': '#9333ea'
+                     }
+                 }
+             }
+         }
+     </script>
+
+
+
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navigation" class="nav-container">
+        <div class="nav-content">
+            <div class="nav-header">
+                <!-- Logo Editable -->
+                <div class="logo" onclick="navigateTo('inicio')">
+                    <div class="logo-icon">
+                        <img src="assets/logo.png" alt="Doña Isabela" class="logo-img">
+                    </div>
+                    <span class="logo-text">Doña Isabela</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-desktop">
+                    <button class="nav-btn active" data-page="inicio" onclick="navigateTo('inicio')">Inicio</button>
+                    <button class="nav-btn" data-page="galeria" onclick="navigateTo('galeria')">Galería</button>
+                    <button class="nav-btn" data-page="personaliza" onclick="navigateTo('personaliza')">Personaliza tu pastel</button>
+                    <button class="nav-btn" data-page="sorteos" onclick="navigateTo('sorteos')">Sorteos</button>
+                    <button class="nav-btn" data-page="detras" onclick="navigateTo('detras')">Detrás del pastel</button>
+                    <button class="nav-btn" data-page="contacto" onclick="navigateTo('contacto')">Contacto</button>
+                    
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="mobile-menu">
+                <button class="nav-btn-mobile" data-page="inicio" onclick="navigateTo('inicio')">Inicio</button>
+                <button class="nav-btn-mobile" data-page="galeria" onclick="navigateTo('galeria')">Galería</button>
+                <button class="nav-btn-mobile" data-page="personaliza" onclick="navigateTo('personaliza')">Personaliza tu pastel</button>
+                <button class="nav-btn-mobile" data-page="sorteos" onclick="navigateTo('sorteos')">Sorteos</button>
+                <button class="nav-btn-mobile" data-page="detras" onclick="navigateTo('detras')">Detrás del pastel</button>
+                <button class="nav-btn-mobile" data-page="contacto" onclick="navigateTo('contacto')">Contacto</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        
+        <!-- Página de Inicio -->
+        <div id="page-inicio" class="page active">
+            <div class="page-content">
+                <!-- Hero Section -->
+                <section class="hero-section">
+                    <div class="hero-content">
+                        <div class="hero-text animate-fade-in">
+                            <div class="greeting">¡Bienvenidos!</div>
+                            <h1 class="hero-title">
+                                Bienvenidos a <span class="gradient-text">Doña Isabela</span>
+                            </h1>
+                            <p class="hero-description">
+                                Creamos pasteles artesanales únicos con amor, tradición y los mejores ingredientes. 
+                                Cada pastel cuenta una historia especial.
+                            </p>
+                            <div class="hero-buttons">
+                                <button class="btn btn-primary animate-bounce-gentle" onclick="navigateTo('galeria')">
+                                    Ver Galería
+                                </button>
+                                <button class="btn btn-secondary" onclick="navigateTo('personaliza')">
+                                    Personaliza tu Pastel
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Featured Image -->
+                <section class="featured-section">
+                    <div class="featured-content">
+                        <div class="featured-image">
+                            <img src="assets/imagen0.webp" 
+                                 alt="Pasteles artesanales Doña Isabela">
+                            <div class="featured-overlay">
+                                <div class="featured-text">
+                                    <h3 class="pas2">Pasteles hechos con amor</h3>
+                                    <p>Más de 10 años creando momentos dulces e inolvidables</p>
+                                </div>
+
+                                <style>
+                                    .pas2{
+                                        font-weight: bold;
+                                    }
+                                </style>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Features -->
+                <section class="features-section">
+                    <div class="features-content">
+                        <h2 class="features-title">¿Por qué elegir Doña Isabela?</h2>
+                        <div class="features-grid">
+                            <div class="feature-card animate-on-scroll">
+                                <div class="feature-icon">🎂</div>
+                                <h3>100% Artesanal</h3>
+                                <p>Cada pastel es único, hecho a mano con recetas tradicionales y técnicas artesanales.</p>
+                            </div>
+                            
+                            <div class="feature-card animate-on-scroll">
+                                <div class="feature-icon">🌟</div>
+                                <h3>Personalización Total</h3>
+                                <p>Adapta cada detalle a tu gusto: sabores, decoración y mensaje especial.</p>
+                            </div>
+                            
+                            <div class="feature-card animate-on-scroll">
+                                <div class="feature-icon">🏆</div>
+                                <h3>Ingredientes Premium</h3>
+                                <p>Solo utilizamos los mejores ingredientes frescos y naturales para garantizar el mejor sabor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Call to Action -->
+                <section class="cta-section">
+                    <div class="cta-content">
+                        <div class="cta-card">
+                            <h2>¿Listo para crear tu pastel ideal?</h2>
+                            <p>Explora nuestra galería completa o comienza personalizando tu pastel perfecto ahora mismo.</p>
+                            <div class="cta-buttons">
+                                <button class="btn btn-primary" onclick="navigateTo('galeria')">
+                                    Explorar Galería
+                                </button>
+                                <button class="btn btn-secondary" onclick="navigateTo('personaliza')">
+                                    Comenzar Personalización
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Página de Galería -->
+        <div id="page-galeria" class="page">
+            <div class="page-content">
+                <!-- Header -->
+                <div class="page-header animate-fade-in">
+                    <h1>Nuestra Galería Completa</h1>
+                    <p>Explora nuestra amplia colección de pasteles artesanales. Selecciona tu favorito y personalizalo completamente.</p>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="filter-container animate-slide-up">
+                    <div class="filter-badges" id="category-filters">
+                        <button class="filter-badge active" data-category="Todos" onclick="filterCategory('Todos')">Todos</button>
+                        <button class="filter-badge" data-category="Chocolate" onclick="filterCategory('Chocolate')">Chocolate</button>
+                        <button class="filter-badge" data-category="Especial" onclick="filterCategory('Especial')">Especial</button>
+                        <button class="filter-badge" data-category="Cheesecake" onclick="filterCategory('Cheesecake')">Cheesecake</button>
+                        <button class="filter-badge" data-category="Tradicional" onclick="filterCategory('Tradicional')">Tradicional</button>
+                        <button class="filter-badge" data-category="Saludable" onclick="filterCategory('Saludable')">Saludable</button>
+                        <button class="filter-badge" data-category="Cítrico" onclick="filterCategory('Cítrico')">Cítrico</button>
+                        <button class="filter-badge" data-category="Frutal" onclick="filterCategory('Frutal')">Frutal</button>
+                        <button class="filter-badge" data-category="Gourmet" onclick="filterCategory('Gourmet')">Gourmet</button>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div id="products-grid" class="products-grid">
+                    <!-- Los productos se cargan dinámicamente -->
+                </div>
+
+                <!-- Call to Action -->
+                <div class="gallery-cta">
+                    <div class="cta-card">
+                        <h2>¿Listo para personalizar?</h2>
+                        <p>Selecciona cualquier pastel y personalizalo completamente</p>
+                        <button class="btn btn-primary" onclick="navigateTo('personaliza')">
+                            Ir a Personalización
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página de Personalización -->
+        <div id="page-personaliza" class="page">
+            <div class="page-content">
+                <!-- Header -->
+                <div class="page-header animate-fade-in">
+                    <h1>Personaliza tu Pastel Ideal</h1>
+                    <p>Crea el pastel perfecto para tu ocasión especial. Completa todos los pasos para recibir tu cotización personalizada.</p>
+                </div>
+
+                <!-- Progress Steps - NÚMEROS SIEMPRE VISIBLES -->
+                <div class="progress-container animate-slide-up">
+                    <div class="progress-steps">
+                        <div class="step-item active" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-line"></div>
+                        </div>
+                        <div class="step-item" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-line"></div>
+                        </div>
+                        <div class="step-item" data-step="3">
+                            <div class="step-number">3</div>
+                            <div class="step-line"></div>
+                        </div>
+                        <div class="step-item" data-step="4">
+                            <div class="step-number">4</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step Content -->
+                <div class="step-header">
+                    <h2 id="step-title">Paso 1: Personaliza tu pastel</h2>
+                    <p id="step-description">Selecciona tu base y personaliza cada detalle</p>
+                </div>
+
+                <!-- Step 1: Base Selection -->
+                <div id="step-1" class="step-content active">
+                    <!-- Selección de Base como Tarjetas -->
+                    <div class="base-selection-section">
+                        <h3>Elige tu base</h3>
+                        <div id="cake-cards" class="cake-cards-grid">
+                            <!-- Las tarjetas se cargan dinámicamente -->
+                        </div>
+                    </div>
+
+                    <!-- Especificaciones -->
+                    <div class="specifications-section">
+                        <h3>Especificaciones</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <label>Número de personas</label>
+                                <select id="num-personas" class="form-select">
+                                    <option value="4-6">4-6 personas</option>
+                                    <option value="8-10">8-10 personas</option>
+                                    <option value="12-15">12-15 personas</option>
+                                    <option value="16-20">16-20 personas</option>
+                                    <option value="20-25">20-25 personas</option>
+                                    <option value="25-30">25-30 personas</option>
+                                    <option value="30+">Más de 30 personas</option>
+                                </select>
+                            </div>
+                            <div class="spec-item">
+                                <label>Peso aproximado</label>
+                                <select id="peso-libras" class="form-select">
+                                    <option value="1">1 libra</option>
+                                    <option value="1.5">1.5 libras</option>
+                                    <option value="2">2 libras</option>
+                                    <option value="2.5">2.5 libras</option>
+                                    <option value="3">3 libras</option>
+                                    <option value="4">4 libras</option>
+                                    <option value="5">5 libras</option>
+                                    <option value="6">6+ libras</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ingredientes -->
+                    <div class="ingredients-section">
+                        <div class="ingredients-grid">
+                            <!-- Quitar ingredientes -->
+                            <div class="ingredient-category remove-ingredients">
+                                <h4>Ingredientes a remover</h4>
+                                <p>Selecciona los ingredientes que NO quieres</p>
+                                <div id="remove-ingredients" class="ingredients-list">
+                                    <!-- Se cargan dinámicamente -->
+                                </div>
+                            </div>
+
+                            <!-- Agregar ingredientes -->
+                            <div class="ingredient-category add-ingredients">
+                                <h4>Ingredientes adicionales</h4>
+                                <p>Personaliza tu pastel con ingredientes extra</p>
+                                <div class="ingredient-categories">
+                                    <div class="category-section">
+                                        <h5>🍓 Frutas</h5>
+                                        <div id="frutas-ingredients" class="ingredients-list compact">
+                                            <!-- Se cargan dinámicamente -->
+                                        </div>
+                                    </div>
+                                    <div class="category-section">
+                                        <h5>🍫 Chocolates y Dulces</h5>
+                                        <div id="chocolates-ingredients" class="ingredients-list compact">
+                                            <!-- Se cargan dinámicamente -->
+                                        </div>
+                                    </div>
+                                    <div class="category-section">
+                                        <h5>🥜 Frutos Secos</h5>
+                                        <div id="frutos-ingredients" class="ingredients-list compact">
+                                            <!-- Se cargan dinámicamente -->
+                                        </div>
+                                    </div>
+                                    <div class="category-section">
+                                        <h5>🥛 Cremas y Rellenos</h5>
+                                        <div id="cremas-ingredients" class="ingredients-list compact">
+                                            <!-- Se cargan dinámicamente -->
+                                        </div>
+                                    </div>
+                                    <div class="category-section">
+                                        <h5>✨ Decoraciones</h5>
+                                        <div id="decoraciones-ingredients" class="ingredients-list compact">
+                                            <!-- Se cargan dinámicamente -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Message -->
+                <div id="step-2" class="step-content">
+                    <div class="step-card">
+                        <div class="step-icon">💬</div>
+                        <h3>Mensaje personalizado</h3>
+                        <p>Añade un mensaje especial para tu pastel</p>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label><span class="required">*</span> Mensaje en el pastel</label>
+                                <textarea id="custom-message" class="form-textarea" rows="3" placeholder="Ej: Feliz Cumpleaños María!" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Ocasión especial</label>
+                                <select id="ocasion" class="form-select">
+                                    <option value="">Selecciona la ocasión</option>
+                                    <option value="cumpleanos">Cumpleaños</option>
+                                    <option value="aniversario">Aniversario</option>
+                                    <option value="boda">Boda</option>
+                                    <option value="bautizo">Bautizo</option>
+                                    <option value="graduacion">Graduación</option>
+                                    <option value="baby-shower">Baby Shower</option>
+                                    <option value="despedida">Despedida</option>
+                                    <option value="celebracion">Celebración especial</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Contact Information -->
+                <div id="step-3" class="step-content">
+                    <div class="step-card contact-form">
+                        <div class="step-icon">📞</div>
+                        <h3>Información de contacto</h3>
+                        <p>Para coordinar los detalles de tu pedido por WhatsApp</p>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label><span class="required">*</span> Nombre completo</label>
+                                <input type="text" id="customer-name" class="form-input" placeholder="Escribe tu nombre completo" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label><span class="required">*</span> Número de WhatsApp</label>
+                                <input type="tel" id="customer-whatsapp" class="form-input" placeholder="Ej: +593 99 345 3456" required>
+                                <small>Incluye el código de país para contactarte mejor</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Email (opcional)</label>
+                                <input type="email" id="customer-email" class="form-input" placeholder="tu@email.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Fecha requerida (opcional)</label>
+                                <input type="date" id="required-date" class="form-input">
+                                <small>Recomendamos solicitar con al menos 48 horas de anticipación</small>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label>Comentarios adicionales</label>
+                                <textarea id="additional-comments" class="form-textarea" rows="3" placeholder="Cualquier detalle especial o comentario..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <div class="info-icon"></div>
+                            <div class="info-content">
+                                <h4>¿Qué pasa después?</h4>
+                                <p>Te contactaremos por WhatsApp dentro de las próximas 2 horas para confirmar todos los detalles, precio final y coordinar la entrega.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Box Selection -->
+                <div id="step-4" class="step-content">
+                    <div class="step-card">
+                        <h3>Selección de tipo de caja</h3>
+                        <p>Elige la presentación perfecta</p>
+                        
+                        <div id="box-options" class="box-grid">
+                            <div class="box-card" data-box="basica" onclick="selectBox('basica')">
+                                <div class="box-image">
+                                    <img src="assets/cajabasica.jpg" alt="Caja Básica">
+                                    <div class="box-check hidden">✓</div>
+                                </div>
+                                <div class="box-info">
+                                    <h4>Caja Básica</h4>
+                                    <p>Caja resistente con diseño elegante.</p>
+                                    <span class="box-price">Incluida sin costo</span>
+                                </div>
+                            </div>
+
+                            <div class="box-card" data-box="premium" onclick="selectBox('premium')">
+                                <div class="box-image">
+                                    <img src="assets/cajapremium.jpg" alt="Caja Premium">
+                                    <div class="box-check hidden">✓</div>
+                                </div>
+                                <div class="box-info">
+                                    <h4>Caja Premium</h4>
+                                    <p>Caja de lujo con ventana transparente.</p>
+                                    <span class="box-price">+$3,50</span>
+                                </div>
+                            </div>
+
+                            <div class="box-card" data-box="regalo" onclick="selectBox('regalo')">
+                                <div class="box-image">
+                                    <img src="assets/cajaregalo.jpg" alt="Caja de Regalo">
+                                    <div class="box-check hidden">✓</div>
+                                </div>
+                                <div class="box-info">
+                                    <h4>Caja de Regalo</h4>
+                                    <p>Decorativa con lazo y tarjeta personalizada.</p>
+                                    <span class="box-price">+$2,50</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Order Summary -->
+                        <div id="order-summary" class="order-summary">
+                            <h4>Resumen de tu pedido</h4>
+                            <div id="summary-content" class="summary-content">
+                                <!-- Se actualiza dinámicamente -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="step-navigation">
+                    <button id="prev-btn" class="btn btn-secondary" onclick="previousStep()">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                        Anterior
+                    </button>
+                    <button id="next-btn" class="btn btn-primary" onclick="nextStep()">
+                        Siguiente
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página de Sorteos -->
+        <div id="page-sorteos" class="page">
+            <div class="min-h-screen py-8" style="background-color: var(--background);">
+                <div class="max-w-6xl mx-auto px-4">
+                    <!-- Header -->
+                    <div class="text-center mb-12">
+                        <div class="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white text-lg px-6 py-2 rounded-full mb-4 shadow-floating">
+                            <h4 class="title_sorteo">¡SORTEO ACTIVO!</h4>
+                        </div>
+
+                        <style>
+                            @keyframes floatShadow {
+                              0%, 100% {
+                                transform: translateY(0);
+                                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+                              }
+                              50% {
+                                transform: translateY(-10px);
+                                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+                              }
+                            }
+                            
+                            .shadow-floating {
+                              animation: floatShadow 2s ease-in-out infinite;
+                            }
+
+                            .title_sorteo{
+                                font-weight: 600;
+                            }
+                            </style>
+                            
+                        
+                        <h1 class="text-4xl font-bold text-gray-800 mb-4">Sorteo Mensual</h1>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            ¡Gana un pastel personalizado valorado en $60,00! Participa en nuestro sorteo mensual 
+                            y llévate a casa una deliciosa sorpresa.
+                        </p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <!-- Prize Image -->
+                        <div class="relative">
+                            <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                                <img src="assets/sorteo.jpg" 
+                                     alt="Pastel premio del sorteo" 
+                                     class="w-full h-96 lg:h-[500px] object-cover">
+                                <div class="absolute top-4 left-4">
+                                    <span class="bg-yellow-500 text-white text-lg px-4 py-2 rounded-full font-medium">
+                                        Premio: $60,00
+                                    </span>
+                                </div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end">
+                                    <div class="p-6 text-white">
+                                        <h3 class="text-2xl font-semibold mb-2">Pastel Premium Personalizado</h3>
+                                        <p class="text-lg opacity-90">Incluye decoración premium y mensaje personalizado</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Instructions -->
+                        <div class="space-y-6">
+                            <div class="bg-white/80 backdrop-blur border border-pink-100 rounded-xl p-6 shadow-lg">
+                                <h2 class="text-2xl font-semibold text-gray-800 mb-4">¿Cómo participar?</h2>
+                                <p class="text-gray-600 mb-6">Sigue estos sencillos pasos para entrar al sorteo</p>
+                                <div class="space-y-4">
+                                    <div class="flex items-start space-x-4 step">
+                                        <div class="bg-pink-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-semibold shrink-0">1</div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800">Compra cualquier pastel</h4>
+                                            <p class="text-gray-600 text-sm">Realiza una compra en nuestra pastelería durante este mes</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-4 step">
+                                        <div class="bg-pink-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-semibold shrink-0">2</div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800">Toma una foto</h4>
+                                            <p class="text-gray-600 text-sm">Fotografía tu pastel en el momento más especial</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-4 step">
+                                        <div class="bg-pink-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-semibold shrink-0">3</div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800">Súbela a Instagram</h4>
+                                            <p class="text-gray-600 text-sm">Publica la foto con el hashtag <span class="font-semibold text-pink-600">#MiPostreConDoñaIsabela</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-4 step">
+                                        <div class="bg-pink-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-semibold shrink-0">4</div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-800">Etiquétanos</h4>
+                                            <p class="text-gray-600 text-sm">Menciona <span class="font-semibold text-pink-600">@pasteleriadonaisabela</span> en tu publicación</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <style>
+                                .step {
+                                  transition: transform 0.3s ease-in-out;
+                                }
+                                
+                                .step:hover {
+                                  transform: scale(1.05);
+                                }
+                                </style>
+                                
+                                
+
+                            <!-- Contest Info -->
+                            <div class="bg-gradient-to-r from-pink-100 to-purple-100 border border-pink-200 rounded-xl p-6 shadow-lg">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">Información del sorteo</h3>
+                                <div class="space-y-2 text-sm text-gray-700">
+                                    <div class="flex justify-between">
+                                        <span>Fecha de inicio:</span>
+                                        <span class="font-semibold">15 de Agosto 2025</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Fecha límite:</span>
+                                        <span class="font-semibold">15 de Septiembre 2025</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Anuncio del ganador:</span>
+                                        <span class="font-semibold">18 de Septiembre 2025</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Participantes actuales:</span>
+                                        <span class="font-semibold text-pink-600">56 personas</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Participate Button -->
+                            <div class="text-center">
+                                <button id="participate-btn" onclick="participate()" class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-12 py-4 text-lg rounded-lg font-medium transition-all duration-300 shadow-lg floating boron">
+                                    🎉 ¡Participar Ahora!
+                                </button>                                
+                                
+                                <div id="participated-message" class="hidden bg-green-100 border border-green-300 rounded-lg p-4 mt-4">
+                                    <p class="text-green-800 font-semibold">✅ ¡Ya estás registrado en el sorteo!</p>
+                                    <p class="text-green-600 text-sm mt-1">No olvides seguir las instrucciones en Instagram</p>
+                                </div>
+                            </div>
+
+                            <style>
+                                :root {
+                                  --primary-pink: #ec4899;
+                                  --primary-purple: #8b5cf6;
+                                  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                                  --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.15);
+                                }
+                                
+                                @keyframes float {
+                                  0%, 100% {
+                                    transform: translateY(0);
+                                  }
+                                  50% {
+                                    transform: translateY(-8px);
+                                  }
+                                }
+                                
+                                .floating {
+                                  animation: float 3s ease-in-out infinite;
+                                  position: relative;
+                                  overflow: hidden;
+                                  background: #ec4899;
+                                }
+                                
+                                .floating::before {
+                                  content: '';
+                                  position: absolute;
+                                  top: 0;
+                                  left: -100%;
+                                  width: 100%;
+                                  height: 100%;
+                                  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                                  transition: left 0.5s ease;
+                                  z-index: 1;
+                                }
+                                
+                                .floating:hover::before {
+                                  left: 100%;
+                                }
+                                
+                                .floating:hover {
+                                  transform: scale(1.05);
+                                  box-shadow: var(--shadow-xl);
+                                }
+                                </style>
+                                
+                                
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página Detrás del Pastel (COMPLETAMENTE REDISEÑADA) -->
+        <div id="page-detras" class="page">
+            <div class="min-h-screen py-8" style="background-color: var(--background);">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    
+                    <!-- Header -->
+                    <div class="text-center mb-12">
+                        <div class="flex justify-center mb-4">
+                            <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center">
+                                <svg class="w-14 h-14 text-pink-600 breathe" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            
+                            
+                            <style>
+                                @keyframes breathe {
+                                  0%, 100% {
+                                    transform: scale(1);
+                                    opacity: 1;
+                                  }
+                                  50% {
+                                    transform: scale(1.08);
+                                    opacity: 0.9;
+                                  }
+                                }
+                                
+                                .breathe {
+                                  animation: breathe 2.5s ease-in-out infinite;
+                                  transform-origin: center;
+                                }
+                                </style>
+                                
+
+
+
+                        </div>
+                        <h1 class="text-4xl font-bold text-gray-800 mb-4">
+                            Detrás del Pastel
+                        </h1>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Descubre el amor y dedicación que ponemos en cada creación. 
+                            Cada pastel tiene su propia historia y proceso único.
+                        </p>
+                    </div>
+
+                    <!-- Video principal -->
+<div class="mb-12 bg-white/80 backdrop-blur-sm border border-pink-100 overflow-hidden rounded-xl shadow-lg">
+    <div class="relative">
+        <!-- Vista previa del video -->
+        <div id="video-preview" class="relative cursor-pointer" onclick="showMainVideo()">
+            <img src="assets/videoimagen.jpg"
+                 alt="Proceso artesanal de creación de pasteles"
+                 class="w-full h-96 object-cover">
+            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <button class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <svg class="w-6 h-6 inline mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    Ver Proceso Completo
+                </button>
+            </div>
+            <div class="absolute bottom-4 left-4 bg-black/60 text-white px-3 py-1 rounded flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12,6 12,12 16,14"/>
+                </svg>
+                2:35 min
+            </div>
+        </div>
+
+        <!-- Reproductor de video -->
+        <div id="video-player" class="relative w-full h-96 bg-gray-900 hidden">
+            <iframe class="w-full h-full"
+                    src="https://www.youtube-nocookie.com/embed/6YgdoXBrD7s?si=V6ONa0biCb5tcF-G&amp;controls=0"
+                    title="Proceso artesanal de creación de pasteles"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+
+    <div class="p-6">
+        <h3 class="text-2xl font-bold text-gray-800 mb-3">
+            El Arte de Crear Pasteles Únicos
+        </h3>
+        <p class="text-gray-600 leading-relaxed">
+            🎥 En este video te contamos cómo funcionan nuestros videos personalizados, integrados directamente en la caja de tu pedido. Descubre cómo transformamos cada entrega en una experiencia única, con mensajes especiales, historias emotivas y detalles pensados solo para ti. No te pierdas esta experiencia inolvidable con Pastelería Doña Isabela. Porque cada pastel merece una historia… y cada historia merece ser contada con cariño.
+        </p>
+    </div>
+</div>
+
+
+                    <!-- Servicio personalizado -->
+<div class="mb-12">
+    <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">
+        Tu Pastel, Tu Historia
+    </h2>
+
+    <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <div>
+            <div class="bg-white/80 backdrop-blur-sm border border-pink-100 rounded-xl p-6 shadow-lg">
+                <!-- Ícono + título -->
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                             stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 3.75 9.375v-4.5ZM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 0 1-1.125-1.125v-4.5ZM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 13.5 9.375v-4.5Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M6.75 6.75h.75v.75h-.75v-.75ZM6.75 16.5h.75v.75h-.75v-.75ZM16.5 6.75h.75v.75h-.75v-.75ZM13.5 13.5h.75v.75h-.75v-.75ZM13.5 19.5h.75v.75h-.75v-.75ZM19.5 13.5h.75v.75h-.75v-.75ZM19.5 19.5h.75v.75h-.75v-.75ZM16.5 16.5h.75v.75h-.75v-.75Z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Video Personalizado</h3>
+                        <p class="text-gray-600">Para pedidos especiales</p>
+                    </div>
+                </div>
+
+                <!-- Texto y pasos -->
+                <div class="space-y-4">
+                    <p class="text-gray-800 leading-relaxed">
+                        Cuando realizas un <strong>pedido especial</strong> con nosotros, no solo recibes un pastel único, 
+                        sino también un recuerdo especial del proceso de creación.
+                    </p>
+
+                    <div class="bg-pink-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-gray-800 mb-2">¿Cómo funciona?</h4>
+                        <ol class="space-y-2 text-sm text-gray-800">
+                            <li class="paso-hover flex items-start gap-2">
+                                <span class="bg-pink-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">1</span>
+                                Realizas tu pedido especial personalizado
+                            </li>
+                            <li class="paso-hover flex items-start gap-2">
+                                <span class="bg-pink-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">2</span>
+                                Grabamos todo el proceso de creación de tu pastel
+                            </li>
+                            <li class="paso-hover flex items-start gap-2">
+                                <span class="bg-pink-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">3</span>
+                                Recibes tu pastel en una caja especial con código QR
+                            </li>
+                            <li class="paso-hover flex items-start gap-2">
+                                <span class="bg-pink-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">4</span>
+                                Escaneas el QR y accedes al video de tu pastel
+                            </li>
+                        </ol>
+                    </div>
+
+                    <style>
+                        /* Animación de zoom suave en pasos */
+                            .paso-hover {
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                            }
+                            .paso-hover:hover {
+                            transform: scale(1.03);
+                            }
+
+                    </style>
+                </div>
+            </div>
+        </div>
+
+        <!-- Imagen + recordatorio -->
+        <div class="space-y-6">
+            <img src="assets/recuerdoespecial.jpg"
+                 alt="Caja especial con código QR"
+                 class="w-full h-48 object-cover rounded-lg shadow-lg">
+
+                 <div class="bg-gradient-to-r from-pink-100 to-purple-100 border border-pink-200 rounded-xl p-4 shadow-lg recuerdo-hover">
+                    <div class="flex items-center gap-3">
+                        <svg class="w-8 h-8 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                  d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                  clip-rule="evenodd"/>
+                        </svg>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Un Recuerdo Especial</h4>
+                            <p class="text-sm text-gray-600">
+                                Tu video personalizado será un recuerdo único del proceso artesanal 
+                                que hizo posible tu pastel especial.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <style>
+            /* Efecto de ola luminosa tipo btn-primary */
+            .recuerdo-hover {
+            position: relative;
+            overflow: hidden;
+            }
+
+            .recuerdo-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+            pointer-events: none;
+            }
+
+            .recuerdo-hover:hover::before {
+            left: 100%;
+            }
+
+        </style>
+
+
+
+    </div>
+</div>
+
+
+                    <!-- Estadísticas -->
+                    <div class="grid md:grid-cols-3 gap-6 mb-12">
+                        <div class="zoom-card text-center p-6 bg-white/80 backdrop-blur-sm border border-pink-100 rounded-xl shadow-lg">
+                        <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">3-5 horas</h3>
+                        <p class="text-gray-600">Tiempo promedio de creación por pastel</p>
+                        </div>
+                    
+                        <div class="zoom-card text-center p-6 bg-white/80 backdrop-blur-sm border border-pink-100 rounded-xl shadow-lg">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">20+</h3>
+                        <p class="text-gray-600">Videos personalizados creados</p>
+                        </div>
+                    
+                        <div class="zoom-card text-center p-6 bg-white/80 backdrop-blur-sm border border-pink-100 rounded-xl shadow-lg">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">100%</h3>
+                        <p class="text-gray-600">Satisfacción de nuestros clientes</p>
+                        </div>
+                    </div>
+  
+
+                    <style>
+                        .zoom-card {
+                          transition: transform 0.4s ease, box-shadow 0.4s ease;
+                        }
+                        
+                        .zoom-card:hover {
+                          transform: scale(1.05);
+                          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+                        }
+                        </style>
+                        
+
+                    <!-- Call to action -->
+                    <div class="text-center bg-gradient-to-r from-pink-100 to-purple-100 p-8 rounded-2xl border border-pink-200">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                            ¿Quieres tu Video Personalizado?
+                        </h2>
+                        <p class="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+                            Los videos personalizados están disponibles para todo tipo de pedidos. 
+                            Contáctanos para crear un pastel único y recibir tu video exclusivo del proceso.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                            <button onclick="navigateTo('personaliza')" class="btn-primary">
+                              <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                              </svg>
+                              Hacer Pedido Especial
+                            </button>
+                          
+                            <button onclick="navigateTo('contacto')" class="btn-secondary">
+                              Más Información
+                            </button>
+                          </div>
+
+                          <style>
+                            :root {
+                              --primary-pink: #ec4899;
+                              --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                              --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.15);
+                            }
+                            
+                            /* Botón primario con brillo */
+                            .btn-primary {
+                              position: relative;
+                              background: var(--primary-pink);
+                              color: white;
+                              padding: 0.75rem 2rem;
+                              border-radius: 0.5rem;
+                              font-weight: 500;
+                              box-shadow: var(--shadow);
+                              transition: all 0.3s ease;
+                              overflow: hidden;
+                            }
+                            
+                            .btn-primary::before {
+                              content: '';
+                              position: absolute;
+                              top: 0;
+                              left: -100%;
+                              width: 100%;
+                              height: 100%;
+                              background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                              transition: left 0.5s ease;
+                              z-index: 1;
+                            }
+                            
+                            .btn-primary:hover::before {
+                              left: 100%;
+                            }
+                            
+                            .btn-primary:hover {
+                              transform: translateY(-2px);
+                              box-shadow: var(--shadow-xl);
+                            }
+                            
+                            /* Botón secundario */
+                            .btn-secondary {
+                              background: transparent;
+                              color: var(--primary-pink);
+                              border: 2px solid var(--primary-pink);
+                              padding: 0.75rem 2rem;
+                              border-radius: 0.5rem;
+                              font-weight: 500;
+                              transition: all 0.3s ease;
+                            }
+                            
+                            .btn-secondary:hover {
+                              background: var(--primary-pink);
+                              color: white;
+                              transform: translateY(-2px);
+                            }
+                            </style>
+                            
+
+                        <div class="bg-white/60 p-4 rounded-lg inline-block">
+                            <p class="text-sm text-gray-800">
+                                💡 <strong>Nota:</strong> Los videos personalizados se incluyen automáticamente 
+                                en el QR que integra la caja de tu pedido. ¡Disfruta esta experiencia!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página de Contacto -->
+        <div id="page-contacto" class="page">
+            <div class="min-h-screen py-8" style="background-color: var(--background);">
+                <div class="max-w-6xl mx-auto px-4">
+                    <!-- Header -->
+                    <div class="text-center mb-12">
+                        <h1 class="text-4xl font-bold text-gray-800 mb-4">Contáctanos</h1>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            ¿Tienes alguna pregunta o quieres hacer un pedido especial? 
+                            Estamos aquí para ayudarte a crear el pastel perfecto para tu ocasión especial.
+                        </p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-12">
+                        <!-- Contact Form -->
+                        <div class="bg-white/80 backdrop-blur border border-pink-100 rounded-xl p-6 shadow-lg">
+                            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Envíanos un mensaje</h2>
+                            <p class="text-gray-600 mb-6">Completa el formulario y te contactaremos pronto</p>
+                            <form id="contact-form" class="space-y-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        Nombre completo *
+                                    </label>
+                                    <input type="text" id="contact-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500" placeholder="Escribe tu nombre completo" required>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        Número de WhatsApp *
+                                    </label>
+                                    <input type="tel" id="contact-whatsapp" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500" placeholder="Ej: +593 99 032 2305" required>
+                                    <p class="text-xs text-gray-500 mt-1">
+                                        Incluye el código de país para contactarte mejor
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        Mensaje *
+                                    </label>
+                                    <textarea id="contact-message" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500" rows="4" placeholder="Cuéntanos sobre tu evento, preferencias de sabor, fecha requerida, número de personas, etc." required></textarea>
+                                </div>
+
+                                <button type="submit" class="btn-primary-gradient">
+                                    Enviar Mensaje
+                                  </button>
+
+                                  <style>
+                                    .btn-primary-gradient {
+                                      position: relative;
+                                      background: #ec4899;
+                                      color: white;
+                                      padding: 0.75rem 2rem;
+                                      border-radius: 0.5rem;
+                                      font-weight: 500;
+                                      box-shadow: var(--shadow);
+                                      transition: all 0.3s ease;
+                                      overflow: hidden;
+                                      width: 100%;
+                                    }
+                                    
+                                    .btn-primary-gradient::before {
+                                      content: '';
+                                      position: absolute;
+                                      top: 0;
+                                      left: -100%;
+                                      width: 100%;
+                                      height: 100%;
+                                      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                                      transition: left 0.5s ease;
+                                      z-index: 1;
+                                    }
+                                    
+                                    .btn-primary-gradient:hover::before {
+                                      left: 100%;
+                                    }
+                                    
+                                    .btn-primary-gradient:hover {
+                                      transform: translateY(-2px);
+                                      box-shadow: var(--shadow-xl);
+                                      background: #ec4899;
+                                    }
+                                    </style>
+                                    
+
+                                  
+                            </form>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div class="space-y-6">
+                            <!-- WhatsApp Direct -->
+                            <div class="bg-green-50 border border-green-200 rounded-xl p-6 shadow-lg">
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-green-500 text-white rounded-full p-3">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.686"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-gray-800">WhatsApp Directo</h3>
+                                        <p class="text-gray-600 mb-2">+593 99 440 2118</p>
+                                        <button onclick="window.open('https://wa.me/593994402118', '_blank')" class="btn-whatsapp">
+                                            Chatear ahora
+                                          </button>
+
+                                          <style>
+                                            .btn-whatsapp {
+                                              position: relative;
+                                              background-color: #22c55e; /* green-500 */
+                                              color: white;
+                                              padding: 0.5rem 1rem;
+                                              border-radius: 0.375rem;
+                                              font-size: 0.875rem;
+                                              font-weight: 500;
+                                              transition: all 0.3s ease;
+                                              overflow: hidden;
+                                            }
+                                            
+                                            .btn-whatsapp::before {
+                                              content: '';
+                                              position: absolute;
+                                              top: 0;
+                                              left: -100%;
+                                              width: 100%;
+                                              height: 100%;
+                                              background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                                              transition: left 0.5s ease;
+                                              z-index: 1;
+                                            }
+                                            
+                                            .btn-whatsapp:hover::before {
+                                              left: 100%;
+                                            }
+                                            
+                                            .btn-whatsapp:hover {
+                                              transform: translateY(-2px);
+                                              background-color: #16a34a; /* green-600 */
+                                            }
+                                            </style>
+                                              
+                                          
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Business Hours -->
+                            <div class="bg-white/80 backdrop-blur border border-pink-100 rounded-xl p-6 shadow-lg">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-4">Horarios de Atención</h3>
+                                <div class="space-y-3">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-gray-600">Lunes - Sáb</span>
+                                        <span class="font-medium">9:00 AM - 5:00 PM</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-gray-600">Domingos</span>
+                                        <span class="font-medium">Closed</span>
+                                    </div>
+                                
+                                    <div class="pt-2 border-t border-gray-200">
+                                        <div class="flex items-center space-x-2">
+                                            <!-- Estado actual -->
+                                        <span id="estadoHorario" class="px-2 py-1 rounded text-sm font-medium">Cargando...</span>
+
+                                        <!-- Mensaje complementario -->
+                                        <span id="mensajeHorario" class="ml-2 text-sm font-medium text-gray-700">...</span>
+
+                                        <script>
+                                        function actualizarEstadoHorario() {
+                                        const estadoSpan = document.getElementById('estadoHorario');
+                                        const mensajeSpan = document.getElementById('mensajeHorario');
+                                        const ahora = new Date();
+                                        const hora = ahora.getHours();
+
+                                        const abierto = hora >= 9 && hora < 17;
+
+                                        if (abierto) {
+                                            estadoSpan.textContent = 'Abierto ahora';
+                                            estadoSpan.className = 'bg-green-500 text-white px-2 py-1 rounded text-sm font-medium';
+                                            mensajeSpan.textContent = 'Cerramos a las 5pm.';
+                                        } else {
+                                            estadoSpan.textContent = 'Cerrado';
+                                            estadoSpan.className = 'bg-red-500 text-white px-2 py-1 rounded text-sm font-medium';
+                                            mensajeSpan.textContent = 'Abrimos a las 9am.';
+                                        }
+                                        }
+
+                                        // Ejecutar al cargar
+                                        actualizarEstadoHorario();
+
+                                        // Actualizar cada 5 segundos
+                                        setInterval(actualizarEstadoHorario, 5000);
+                                        </script>
+
+
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="bg-white/80 backdrop-blur border border-pink-100 rounded-xl p-6 shadow-lg">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-4">Nuestra Ubicación</h3>
+                                <div class="space-y-3">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="bg-pink-100 p-2 rounded-full">
+                                            <svg class="w-5 h-5 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-gray-800">Veranda</p>
+                                            <p class="text-gray-600">090307</p>
+                                            <p class="text-gray-600">Guayaquil, Ecuador</p>
+                                        </div>
+                                    </div>
+                                    <button onclick="window.open('https://maps.app.goo.gl/JijADxpr7SBkXnxY7?g_st=aw', '_blank')" class="border border-pink-300 text-pink-600 hover:bg-pink-50 px-4 py-2 rounded text-sm font-medium transition-colors">
+                                        Ver en Google Maps
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <div class="mt-16">
+                        <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">Preguntas Frecuentes</h2>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="faq-card">
+                                <h4 class="font-semibold text-gray-800 mb-2">¿Con cuánta anticipación debo hacer mi pedido?</h4>
+                                <p class="text-gray-600 text-sm">Recomendamos hacer pedidos con al menos 48 horas de anticipación para pasteles estándar y 1 semana para diseños personalizados.</p>
+                              </div>
+                              <div class="faq-card">
+                                <h4 class="font-semibold text-gray-800 mb-2">¿Hacen envíos a domicilio?</h4>
+                                <p class="text-gray-600 text-sm">Sí, realizamos entregas en el área metropolitana de Medellín. El costo del envío varía según la distancia.</p>
+                              </div>
+                              <div class="faq-card">
+                                <h4 class="font-semibold text-gray-800 mb-2">¿Pueden hacer pasteles sin gluten o veganos?</h4>
+                                <p class="text-gray-600 text-sm">¡Por supuesto! Ofrecemos opciones sin gluten, veganas y para diferentes restricciones alimentarias. Solo menciona tus necesidades al hacer el pedido.</p>
+                              </div>
+                              <div class="faq-card">
+                                <h4 class="font-semibold text-gray-800 mb-2">¿Cuál es el tamaño mínimo de pedido?</h4>
+                                <p class="text-gray-600 text-sm">No tenemos tamaño mínimo. Hacemos desde cupcakes individuales hasta pasteles para grandes celebraciones.</p>
+                              </div>
+                        </div>
+                    </div>
+
+                    <style>
+                        .faq-card {
+                          position: relative;
+                          background-color: rgba(255, 255, 255, 0.8);
+                          backdrop-filter: blur(6px);
+                          border: 1px solid #fbcfe8; /* pink-100 */
+                          border-radius: 0.75rem;
+                          padding: 1.5rem;
+                          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+                          transition: transform 0.3s ease;
+                          overflow: hidden;
+                        }
+                        
+                        .faq-card:hover {
+                          transform: scale(1.03);
+                        }
+                        
+                        .faq-card::before {
+                          content: '';
+                          position: absolute;
+                          top: 0;
+                          left: -100%;
+                          width: 100%;
+                          height: 100%;
+                          background: linear-gradient(120deg, transparent, rgba(255, 182, 193, 0.2), transparent);
+                          transition: left 0.6s ease;
+                          z-index: 0;
+                        }
+                        
+                        .faq-card:hover::before {
+                          left: 100%;
+                        }
+                        
+                        .faq-card h4,
+                        .faq-card p {
+                          position: relative;
+                          z-index: 1;
+                        }
+                        </style>
+                        
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo" onclick="navigateTo('inicio')">
+                        <div class="logo-icon">
+                            <img src="assets/logo.png" alt="Doña Isabela" class="logo-img">
+                        </div>
+                        <span class="logo-text2">Doña Isabela</span>
+                    </div>
+                    <p class="footer-description">
+                        Creando momentos dulces e inolvidables. 
+                        Pasteles artesanales hechos con amor y tradición.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul class="footer-links">
+                        <li><button onclick="navigateTo('inicio')">Inicio</button></li>
+                        <li><button onclick="navigateTo('galeria')">Galería</button></li>
+                        <li><button onclick="navigateTo('personaliza')">Personaliza tu pastel</button></li>
+                        <li><button onclick="navigateTo('sorteos')">Sorteos</button></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul class="footer-info">
+                        <li>📱 +593 99 440 2118</li>
+                        <li>📍 Veranda, 090307, Guayaquil</li>
+                        <li>⏰ Lun - Sáb: 9AM-5PM</li>
+                        <li>⏰ Dom: Closed</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="footer-social">
+                      <button onclick="window.open('https://instagram.com/pasteleriadonaisabela', '_blank')" class="social-btn instagram">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/> <!-- recortado para brevedad -->
+                        </svg>
+                      </button>
+                      <button onclick="window.open('https://www.facebook.com/Pasteleria.Dona.Isabela?locale=es_LA', '_blank')" class="social-btn facebook">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                      </button>
+                      <button onclick="window.open('https://wa.me/593994402118', '_blank')" class="social-btn whatsapp">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.686"/>
+                        </svg>
+                      </button>
+                    </div>
+                </div>
+
+                <style>
+                    .footer-social {
+                    display: flex;
+                    gap: 1rem;
+                    }
+
+                    .social-btn {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    color: white; /* Esto hace que los SVGs se pinten de blanco */
+                    transition: transform 0.3s ease;
+                    }
+
+                    .social-btn:hover {
+                    transform: scale(1.1);
+                    }
+
+                    .social-icon {
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    fill: currentColor;
+                    }
+
+                </style>
+                  
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Pastelería Doña Isabela. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Container -->
+    <div id="notification-container" class="notification-container"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

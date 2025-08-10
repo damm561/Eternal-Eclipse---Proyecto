@@ -1,0 +1,83 @@
+/* Variables CSS - Paleta Rosa Pastel y Modo Oscuro Elegante */
+
+:root {
+    /* Modo día - Rosa pastel suave con fondos diferenciados */
+    --primary-pink: #ec4899;
+    --primary-pink-light: #f472b6;
+    --primary-purple: #a855f7;
+    --primary-purple-light: #c084fc;
+    
+    --pink-50: #fef7ff;
+    --pink-100: #fdf2f8;
+    --pink-200: #fce7f3;
+    --pink-300: #f9a8d4;
+    --pink-400: #f472b6;
+    --pink-500: #ec4899;
+    --pink-600: #db2777;
+    
+    --purple-50: #faf5ff;
+    --purple-100: #f3e8ff;
+    --purple-200: #e9d5ff;
+    --purple-300: #d8b4fe;
+    --purple-400: #c084fc;
+    --purple-500: #a855f7;
+    --purple-600: #9333ea;
+    
+    --rose-50: #fff1f2;
+    --rose-100: #ffe4e6;
+    --rose-200: #fecdd3;
+    --rose-300: #fda4af;
+    
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    
+    --text-color: #1f2937;
+    --text-muted: #6b7280;
+    --bg-color: #ffffff;
+    
+    /* Fondo principal diferenciado - gradiente pastel suave */
+    --bg-gradient: linear-gradient(135deg, #fef7ff 0%, #fce7f3 25%, #f3e8ff 50%, #faf5ff 75%, #fff1f2 100%);
+    
+    /* Fondos de las secciones/tarjetas - más claros y diferenciados */
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --card-bg-alt: rgba(253, 242, 248, 0.9);
+    --section-bg: rgba(255, 255, 255, 0.8);
+    
+    --border-color: rgba(249, 168, 212, 0.3);
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    
+    --radius: 0.75rem;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Modo oscuro - Paleta elegante con fondos bien diferenciados */
+.dark {
+    --text-color: #f8fafc;
+    --text-muted: #94a3b8;
+    --bg-color: #2a2438;
+    
+    /* Fondo principal oscuro con gradiente elegante */
+    --bg-gradient: linear-gradient(135deg, #1e1b2e 0%, #2a2438 25%, #362f47 50%, #403750 75%, #4a4058 100%);
+    
+    /* Fondos de tarjetas diferenciados */
+    --card-bg: rgba(42, 36, 56, 0.95);
+    --card-bg-alt: rgba(54, 47, 71, 0.9);
+    --section-bg: rgba(64, 55, 80, 0.8);
+    
+    --border-color: rgba(216, 180, 254, 0.2);
+    
+    --primary-pink: #f9a8d4;
+    --primary-pink-light: #f472b6;
+    --primary-purple: #d8b4fe;
+    --primary-purple-light: #c084fc;
+}

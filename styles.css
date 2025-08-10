@@ -1,0 +1,89 @@
+/* Doña Isabela - Pastelería Artesanal */
+/* Archivo principal de estilos CSS - HTML/CSS/JS Puro */
+
+/* Importar módulos de estilos */
+@import url('./styles/variables.css');
+@import url('./styles/base.css');
+@import url('./styles/animations.css');
+@import url('./styles/components.css');
+@import url('./styles/navigation.css');
+@import url('./styles/pages.css');
+@import url('./styles/footer.css');
+@import url('./styles/responsive.css');
+
+/* Reset básico adicional */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración global del documento */
+html {
+    scroll-behavior: smooth;
+    font-size: 14px;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--bg-gradient);
+    transition: all 0.3s ease;
+    min-height: 100vh;
+}
+
+/* Utilidades globales */
+.hidden {
+    display: none !important;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary-pink), var(--primary-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Notificaciones */
+.notification-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 9999;
+}
+
+.notification {
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: var(--transition);
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.notification.success {
+    background: #10b981;
+    color: white;
+}
+
+.notification.error {
+    background: #ef4444;
+    color: white;
+}
+
+.notification.warning {
+    background: #f59e0b;
+    color: white;
+}
+
+.notification.info {
+    background: #3b82f6;
+    color: white;
+}
