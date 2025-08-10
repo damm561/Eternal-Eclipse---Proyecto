@@ -209,7 +209,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
 function initializeApp() {
     updateNavigation();
     showPage(appState.currentPage);
@@ -922,5 +921,22 @@ function setupAnimations() {
     const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
     elementsToAnimate.forEach(el => observer.observe(el));
 }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(".fade-in-on-scroll");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // 👈 evita que se vuelva a ocultar
+        }
+      });
+    }, {
+      threshold: 0.2 // Ajusta según tu diseño
+    });
+
+    elements.forEach((el) => observer.observe(el));
+  });
 
 console.log('🎂 Doña Isabela - Script principal cargado');

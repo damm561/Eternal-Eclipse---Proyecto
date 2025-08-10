@@ -127,31 +127,151 @@
                     </div>
                 </section>
 
-                <!-- Features -->
-                <section class="features-section">
-                    <div class="features-content">
-                        <h2 class="features-title">¿Por qué elegir Doña Isabela?</h2>
-                        <div class="features-grid">
-                            <div class="feature-card animate-on-scroll">
-                                <div class="feature-icon">🎂</div>
-                                <h3>100% Artesanal</h3>
-                                <p>Cada pastel es único, hecho a mano con recetas tradicionales y técnicas artesanales.</p>
-                            </div>
-                            
-                            <div class="feature-card animate-on-scroll">
-                                <div class="feature-icon">🌟</div>
-                                <h3>Personalización Total</h3>
-                                <p>Adapta cada detalle a tu gusto: sabores, decoración y mensaje especial.</p>
-                            </div>
-                            
-                            <div class="feature-card animate-on-scroll">
-                                <div class="feature-icon">🏆</div>
-                                <h3>Ingredientes Premium</h3>
-                                <p>Solo utilizamos los mejores ingredientes frescos y naturales para garantizar el mejor sabor.</p>
-                            </div>
+               <!-- Nueva sección de características -->
+                <section class="benefits-section">
+                    <div class="benefits-content">
+                    <h2 class="benefits-title">¿Por qué elegir Doña Isabela?</h2>
+                    <div class="benefits-grid">
+                        <div class="benefit-card fade-in-on-scroll">
+                        <div class="benefit-icon icon-artesanal">🎂</div>
+                        <h3 class="tarjetas-title">100% Artesanal</h3>
+                        <p>Cada pastel es único, hecho a mano con recetas tradicionales y técnicas artesanales.</p>
+                        </div>
+                
+                        <div class="benefit-card fade-in-on-scroll">
+                        <div class="benefit-icon icon-personalizado">🌟</div>
+                        <h3 class="tarjetas-title">Personalización Total</h3>
+                        <p>Adapta cada detalle a tu gusto: sabores, decoración y mensaje especial.</p>
+                        </div>
+                
+                        <div class="benefit-card fade-in-on-scroll">
+                        <div class="benefit-icon icon-premium">🏆</div>
+                        <h3 class="tarjetas-title">Ingredientes Premium</h3>
+                        <p>Solo utilizamos los mejores ingredientes frescos y naturales para garantizar el mejor sabor.</p>
                         </div>
                     </div>
+                    </div>
                 </section>
+
+
+                <style>
+                    /* Sección general */
+                    .benefits-section {
+                    background-color: transparent;
+                    padding: 4rem 1.5rem;
+                    text-align: center;
+                    }
+
+                    .tarjetas-title{
+                        font-weight: 600;
+                    }
+
+                    .benefits-title {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: var(--foreground, #333);
+                    margin-bottom: 3rem;
+                    }
+
+                    /* Grid de tarjetas */
+                    .benefits-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                    gap: 2rem;
+                    justify-items: center;
+                    }
+
+                    /* Tarjeta individual */
+                    .benefit-card {
+                    background-color: white;
+                    border: 1px solid var(--border, #f3d1e8);
+                    border-radius: 1rem;
+                    padding: 2rem 1.5rem;
+                    box-shadow: 0 4px 12px rgba(249, 168, 212, 0.15);
+                    transition: transform 0.4s ease, box-shadow 0.4s ease;
+                    max-width: 320px;
+                    cursor: pointer;
+                    will-change: transform, box-shadow;
+                    }
+
+                    .benefit-card:hover {
+                    transform: translateY(-10px) scale(1.03);
+                    box-shadow: 0 16px 32px rgba(249, 168, 212, 0.35);
+                    }
+
+                    /* Íconos */
+                    .benefit-icon {
+                    font-size: 2.5rem;
+                    width: 64px;
+                    height: 64px;
+                    margin: 0 auto 1rem;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    }
+
+                    /* Colores específicos */
+                    .icon-artesanal {
+                    background-color: #f472b6; /* pink-400 */
+                    }
+
+                    .icon-personalizado {
+                    background-color: #c084fc; /* purple-400 */
+                    }
+
+                    .icon-premium {
+                    background-color: #fda4af; /* rose-300 */
+                    }
+
+                    /* Tipografía */
+                    .benefit-card h3 {
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                    color: #333;
+                    }
+
+                    .benefit-card p {
+                    font-size: 1rem;
+                    color: #666;
+                    line-height: 1.6;
+                    }
+
+                    /* Animación al hacer scroll */
+                    .fade-in-on-scroll {
+                    opacity: 0;
+                    transform: translateY(20px);
+                    transition: opacity 0.6s ease, transform 0.6s ease;
+                    }
+
+                    .fade-in-on-scroll.visible {
+                    opacity: 1;
+                    transform: translateY(0);
+                    }
+
+                    .benefit-card {
+                        background-color: white;
+                        border: 1px solid var(--border, #f3d1e8);
+                        border-radius: 1rem;
+                        padding: 2rem 1.5rem;
+                        box-shadow: 0 4px 12px rgba(249, 168, 212, 0.15);
+                        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+                                    box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+                        max-width: 320px;
+                        cursor: pointer;
+                        will-change: transform, box-shadow;
+                        }
+
+                        .benefit-card:hover {
+                        transform: translateY(-12px) scale(1.03);
+                        box-shadow: 0 20px 40px rgba(249, 168, 212, 0.35);
+                        }
+
+
+                </style>
+                
 
                 <!-- Call to Action -->
                 <section class="cta-section">
