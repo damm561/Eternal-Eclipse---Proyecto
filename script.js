@@ -939,4 +939,38 @@ function setupAnimations() {
     elements.forEach((el) => observer.observe(el));
   });
 
+
+
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("mobile-menu-btn");
+    const menu = document.getElementById("mobile-menu");
+    const body = document.body;
+
+    let menuVisible = false;
+
+    menuBtn.addEventListener("click", () => {
+      if (!menuVisible) {
+        menu.classList.remove("hide");
+        menu.classList.add("show");
+        body.classList.add("menu-open");
+      } else {
+        menu.classList.remove("show");
+        menu.classList.add("hide");
+        body.classList.remove("menu-open");
+      }
+
+      menuVisible = !menuVisible;
+    });
+  });
+
+
+
+
+
+
+
+
 console.log('🎂 Doña Isabela - Script principal cargado');
